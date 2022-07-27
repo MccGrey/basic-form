@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.container {
+    margin-left: 3rem;
+    color: #ca281d;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 3.5rem;
+    }
+
+    .hero{
+        background: #000000;
+        background: linear-gradient(to right, #161616, #000000);
+        padding: 200px 0;
+    }
+    
+    .hero__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 35vh;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .hero__heading {
+        font-size: 100px;
+        margin-bottom: 24px;
+        color:#fff;
+    }
+
+    .headline {
+        font-size: 5rem;
+        background: #1E9600;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    }
+
+    .main__btn {
+    font-size: 1.8rem;
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    padding: 20px 60px;
+    border: none;
+    border-radius: 9px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #a00f0f;
+    transition: all 0.25s;
+    border-radius: 9px;
+    
+    
+}
+
+.main__btn:hover {
+    color: rgb(255, 255, 255);
+}
+
+.main__btn:hover:after{
+    width: 100%;
+    
+}
+
+
+.full-page {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/husey.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+
+.fill {
+    font-size: 4rem;
+    margin-top: 20px;
+    color: #ffffff;
+    padding-left: 40%;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 80%;
+    border: 1px solid black;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+}
+
+.form H2 {
+    color: white;
+    font-size: 3rem;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    margin: 20px;
+}
+
+.box {
+    padding: 12px;
+    margin: 6px;
+    width: 75%;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+}
+
+
+::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-radio {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+
+.input-box {
+    padding-bottom: 5px;
+    
+}
+
+.label-radio {
+    position: relative;
+    display: block;
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 25px;
+    padding-left: 25px;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.label-radio::before,
+.label-radio::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+
+}
+
+.label-radio::before {
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #9c1212;
+}
+
+.label-radio::after {
+    left: -7px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9c1212;
+    box-shadow: 0 0 6px 1px #9c1212;
+    opacity: 0;  
+}
+
+.input-radio:checked ~ .label-radio::after {
+    opacity: 1;
+    animation: scale 0.5s;
+}
+
+.input-radio:checked ~ .label-radio{
+    color: #9c1212;
+
+}
+
+@keyframes scale {
+
+    
+        0% {
+            transform: translateY(-50%) scale(1.5);
+        }
+
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
